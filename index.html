@@ -37,7 +37,7 @@
           <h3>
 <a name="thanks-for-visiting-my-websitegithub-page" class="anchor" href="#thanks-for-visiting-my-websitegithub-page"><span class="octicon octicon-link"></span></a>Thanks for visiting my website/github page.</h3>
 
-<p>Hi, my name is Ryan Young and I am a student at Drexel University. I am currently pursuing my BS in Software engineering and my MS in Computer Science with a concentration in artificial intelligence. My passion is robotics and it has been for the last 5 years. In high school I participated in FIRST robotics for three years and still continue to mentor at my high school. I also do research on HUBO the humanoid robot at drexel. More information on my volunteering as a software mentor and my research and experience with Hubo and other robots is below. </p>
+<p>Hi, my name is Ryan Young and I am a student at Drexel University. I am currently pursuing my BS in Software engineering and my MS in Computer Science with a concentration in artificial intelligence. My passion is robotics and it has been for the last 5 years. In high school I participated in FIRST robotics for three years and still continue to mentor at my high school. I also do research on HUBO the humanoid robot at Drexel. More information on my volunteering as a software mentor and my research and experience with HUBO and other robots is below. </p>
 
 <h3>
 <a name="first-robotics-experience-and-mentoring" class="anchor" href="#first-robotics-experience-and-mentoring"><span class="octicon octicon-link"></span></a>FIRST robotics experience and mentoring</h3>
@@ -52,24 +52,36 @@
 <p>The majority of my current work revolves around software development for HUBO the humanoid robot. I have worked on everything about the robot from reassembling the leg to developing an active balancing system to fixing broken wires with solder and wire wrap. HUBO has taught me many different things including introducing me to ROS and giving me a solid foundation on linux system administration. </p>
 
 <h3>
-<a name="maestor" class="anchor" href="#maestor"><span class="octicon octicon-link"></span></a>MAESTOR</h3>
+<a name="MAESTOR" class="anchor" href="#maestor"><span class="octicon octicon-link"></span></a>MAESTOR</h3>
 
-<p>TODO</p>
+<p>MAESTOR stands for Machine And Environment Simulation Translation Over Ros. The purpose behind MAESTOR was to create a flexible system that would allow users to rapidly develop gestures for the HUBO robot as well as offer the ability to integrate external sensors on the robot. The name is comes from an inside joke among the original programmers on the project with the original name MAESTRO. I and another programmer used to very often type maestor into the terminal and laugh at each other when it didn't work. Because of this when we reached a point of the project where we basically started another iteration of it we decided to change the name.</p>
 
-<h3>
-<a name="external-sensors" class="anchor" href="#external-sensors"><span class="octicon octicon-link"></span></a>External Sensors</h3>
+<p>One of the great things about MAESTOR is that it has two main operating modes, a simulation mode that can be run on an external computer and a hardware mode that can be run on the robot. The beauty of the system is that users can develop gestures and movements in simulation on their own computer then take the same code without changing anything and run it on the hardware robot with the same effect. This makes it possible for users to rapidly develop gestures and movements for HUBO, making the HUBO robot an easier robot to do research on. 
 
-<p>TODO </p>
+<h4>
+<a name="external-sensors" class="anchor" href="#external-sensors"><span class="octicon octicon-link"></span></a>External Sensors</h4>
 
-<h3>
-<a name="balancing-and-biped-walking" class="anchor" href="#balancing-and-biped-walking"><span class="octicon octicon-link"></span></a>Balancing and Biped Walking</h3>
+<p>Originally the HUBO robot did not have sensors capable of effectively interacting with the world around it. With the development of MAESTOR I was able to start integrating off the shelf sensors onto HUBO which makes it possible for HUBO to have more knowledge about the world around it. The sensors that we decided to integrate were high quality microphones, an RGB-Depth camera, and high resolution tactile sensors. These sensors correspond to human senses such as hearing, sight, and the sense of touch. </p>
 
-<p>TODO</p>
+<h5>
+<a name="Microphones" class="anchor" href="#external-sensors"><span class="octicon octicon-link"></span></a>Microphones</h5>
 
-<h3>
-<a name="reassembling-the-leg" class="anchor" href="#reassembling-the-leg"><span class="octicon octicon-link"></span></a>Reassembling the Leg</h3>
+<p>The original microphone that HUBO had was a single mono microphone that was not very sensitive. Because of this HUBO couldn't do very much audio processing. With the new stereo microphones that HUBO has, we are able to have HUBO listen more like a person does. HUBO can use its new microphones to do things such as automatic drum calibration, <a href="https://youtu.be/p4ANXkvhypk"> drum mimicking,</a> <a href="https://www.youtube.com/watch?v=eGJKxyRcVko"> audio fingerprinting and dancing,</a> and sound localization. These are only a few examples of the things that HUBO can do with his new sense of hearing and the list continues to grow every day. </p>
 
-<p>TODO</p>
+<h5>
+<a name="Asus Xtion Pro" class="anchor" href="#external-sensors"><span class="octicon octicon-link"></span></a>RGB-Depth Sensor</h5>
+
+<p>Out of the box HUBO also did not have very much vision. HUBO had a single, very low resolution web cam mounted at the top of his head. We've 3d printed a head for HUBO that holds an Asus Xtion Pro RGB-Depth camera which give HUBO a 3d view of the world in front of it. The Asus Xtion Pro is very similar to a kinect camera and has the ability to get depth data about objects in front of it. With the depth data we are able to do a few things such as <a href="https://www.youtube.com/watch?v=RK4W_aYcOCg">facial tracking</a> courtesy of the COB people tracker, and very recently gesture classification thanks to some machine learning research I am pursuing.</p>
+
+<h5>
+<a name="BioTac" class="anchor" href="#external-sensors"><span class="octicon octicon-link"></span></a>BioTacs</h5>
+<p>Lastly, out of the box HUBO did not have any sense of touch. HUBO only had four force torque sensors, two in the wrists, and two in the feet to give any force feedback. These sensors were not very helpful for doing task that require dexterity like picking up objects. Because of this we decided to equip HUBO with very high resolution tactile sensors called BioTacs capable of sensing pressure, vibration, and temperature. Unfortunately, due to the design of the fingers and their unreliability I have not had the opportunity to extensively try grasping things with the new fingers. I have however worked to create software that allowed them to be used on HUBO so that other researchers that have HUBO will be able to use them as well.</p>
+
+<h2>
+<a name="Currentwork" class="anchor" href="#external-sensors"><span class="octicon octicon-link"></span></a>Current Work</h2>
+
+<p>I currently am doing my second co-op with AIG working on HUBO. My work first co-op's work was primarily on the software development and sensor integration as well as general maintenance and operation of HUBO. This second co-op's focus is on using the new sensors that I have given HUBO as well as machine learning and knowledge representation and reasoning techniques to make HUBO smarter. The first project that I have done so far was using joint data calculated from a human skeleton from the RGB-Depth sensor to classify different dance poses. The joint angles are classified using a random forest classifier and when HUBO recognizes a pose it dances in response appropriately. </p>
+
         </article>
       </div>
     </div>
