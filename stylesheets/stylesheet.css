@@ -177,10 +177,13 @@ sub {
 
 /**
  * Remove border when inside `a` element in IE 8/9/10.
+ * Add a shadow
  */
 
 img {
   border: 0;
+  box-shadow: inset 0px 0px 15px #000;
+  border-radius:25px;
 }
 
 /**
